@@ -1,2 +1,2 @@
 import { Template } from 'meteor/templating';
-import './signin.html';
+import './budgetsetup.html';

@@ -1,0 +1,17 @@
+<template name ="budget-setup" >
+  <form id="msform">
+  <img src = "symbol.jpg" width="50" height="50" alt="symbol">
+  <h2> WiredIn </h2>
+  <br>
+  <!-- progressbar -->
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Setup Budget Manager</h2>
+    <h3 class="fs-subtitle">Details</h3>
+    <input type="text" name="income" placeholder="Input Gross Income" />
+    <input type="number" name="tax" placeholder="Input E.g. Tax" />
+    <input type="number" name="savings" placeholder="Input Saving Goal(Month)" />
+    <input type="button" name="next" onclick = "window.location.href = '{{pathFor route='dashboard'}}';" class="next action-button" value="Next" />
+  </fieldset>
+  </form>
+</template>

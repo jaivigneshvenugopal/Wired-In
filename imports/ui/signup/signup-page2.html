@@ -1,0 +1,23 @@
+<template name ="signup-details" >
+  <form id="msform">
+  <img src = "symbol.jpg" width="50" height="50" alt="symbol">
+  <h2> WiredIn </h2>
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Account Setup</li>
+    <li class="active">Personal Details</li>
+    <li>Banks Setup</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Personal Details</h2>
+    <h3 class="fs-subtitle">Step 2</h3>
+    <input type="text" name="fname" placeholder="First Name" />
+    <input type="text" name="lname" placeholder="Last Name" />
+    <input type="text" name="phone" placeholder="Phone" />
+    <textarea name="address" placeholder="Address"></textarea>
+    <input type="button" onclick = "window.location.href = '{{pathFor route='signup-account'}}';" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" onclick = "window.location.href = '{{pathFor route='signup-banksetup'}}';" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  </form>
+</template>

@@ -1,0 +1,19 @@
+<template name ="signup-banksetup" >
+  <form id="msform">
+  <img src = "symbol.jpg" width="50" height="50" alt="symbol">
+  <h2> WiredIn </h2>
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active">Account Setup</li>
+    <li class="active">Personal Details</li>
+    <li class="active">Banks Setup</li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset>
+    <h2 class="fs-title">Banks Setup</h2>
+    <h3 class="fs-subtitle">Step 3</h3>
+    <input type="button" onclick = "window.location.href = '{{pathFor route='signup-details'}}';" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" onclick = "window.location.href = '{{pathFor route='budget-setup'}}';" name="next" class="next action-button" value="Next" />
+  </fieldset>
+  </form>
+</template>
