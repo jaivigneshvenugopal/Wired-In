@@ -1,4 +1,4 @@
-<template name ="signup-details" >
+<template name ="signupDetails" >
   <form id="msform">
   <img src = "symbol.jpg" width="50" height="50" alt="symbol">
   <h2> WiredIn </h2>
@@ -12,12 +12,12 @@
   <fieldset>
     <h2 class="fs-title">Personal Details</h2>
     <h3 class="fs-subtitle">Step 2</h3>
-    <input type="text" name="fname" placeholder="First Name" />
-    <input type="text" name="lname" placeholder="Last Name" />
-    <input type="text" name="phone" placeholder="Phone" />
-    <textarea name="address" placeholder="Address"></textarea>
-    <input type="button" onclick = "window.location.href = '{{pathFor route='signup-account'}}';" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" onclick = "window.location.href = '{{pathFor route='signup-banksetup'}}';" name="next" class="next action-button" value="Next" />
+    <input type="text" id ="FN" name="fname" placeholder="First Name" />
+    <input type="text" id ="LN" name="lname" placeholder="Last Name" />
+    <input type="text" id ="phone" name="phone" placeholder="Phone" />
+    <textarea name="address" id = "add" placeholder="Address"></textarea>
+    <input type="button" onclick="window.location.href = '{{pathFor route='signup-account'}}';" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="next" class="next action-button" value="Next" />
   </fieldset>
   </form>
 </template>

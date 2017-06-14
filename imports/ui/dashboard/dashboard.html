@@ -1,3 +1,6 @@
 <template name = "dashboard" >
   <h1> Dashboard goes hereeeeee </h1>
+  {{#if currentUser}}
+    <input type="button" class="logout" value="Logout <- This button can only be seen if you are logged into the system" />
+  {{/if}}
 </template>
