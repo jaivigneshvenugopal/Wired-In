@@ -1,4 +1,4 @@
-<template name ="signup-account" >
+<template name ="signupAccount" >
   <form id="msform">
   <img src = "symbol.jpg" width="50" height="50" alt="symbol">
   <h2> WiredIn </h2>
@@ -12,10 +12,10 @@
   <fieldset>
     <h2 class="fs-title">Create your account</h2>
     <h3 class="fs-subtitle">Step 1</h3>
-    <input type="text" name="email" placeholder="Email" />
-    <input type="password" name="pass" placeholder="Password" />
-    <input type="password" name="cpass" placeholder="Confirm Password" />
-    <input type="button" onclick = "window.location.href = '{{pathFor route='signup-details'}}';" name="next" class="next action-button" value="Next" />
+    <input type="text" id="email" name="email" placeholder="Email" />
+    <input type="password" id="password" name="pass" placeholder="Password" />
+    <input type="password" id="password1" name="cpass" placeholder="Confirm Password" />
+    <input type="submit" name="next" class="next action-button" value="Next" />
   </fieldset>
   </form>
 </template>

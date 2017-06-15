@@ -7,10 +7,10 @@
 
   <fieldset>
     <h2 class="fs-title">Sign in</h2>
-    <input type="text" name="email" placeholder="Email" />
-    <input type="password" name="pass" placeholder="Password" />
+    <input type="text" id = "email" name="email" placeholder="Email" />
+    <input type="password" id = "password" name="pass" placeholder="Password" />
     <input type="button" onclick = "window.location.href = '{{pathFor route='signup-account'}}';" name="signup" class="next action-button" value="Sign up" />
-    <input type="button" onclick = "window.location.href = '{{pathFor route='dashboard'}}';" name="next" class="next action-button" value="Next" />
+    <input type="submit" name="next" class="next action-button" value="Next" />
   </fieldset>
   </form>
 </template>
