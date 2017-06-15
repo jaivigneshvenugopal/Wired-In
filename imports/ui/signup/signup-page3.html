@@ -12,8 +12,13 @@
   <fieldset>
     <h2 class="fs-title">Banks Setup</h2>
     <h3 class="fs-subtitle">Step 3</h3>
+    <input type="button" name="bank1" onclick = "window.location.href = '{{pathFor route='upload'}}';" value="DBS/POSB"/>
+    <input type="button" name="bank2" onclick = "window.location.href = '{{pathFor route='upload'}}';" value="Citibank"/>
+    <input type="button" name="bank3" onclick = "window.location.href = '{{pathFor route='upload'}}';" value="Standard Chartered"/>
+    <input type="button" name="bank_oth" value="Others"/>
+
     <input type="button" onclick = "window.location.href = '{{pathFor route='signup-details'}}';" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" onclick = "window.location.href = '{{pathFor route='budget-setup'}}';" name="next" class="next action-button" value="Next" />
+
   </fieldset>
   </form>
 </template>
