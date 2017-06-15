@@ -7,8 +7,8 @@ Router.route('/signup-details', {
 Router.route('/signup-banksetup', {
   template: 'signup-banksetup'
 });
-Router.route('/budget-setup', {
-  template: 'budget-setup'
+Router.route('/upload', {
+  template: 'upload'
 });
 Router.route('/dashboard', {
   template: 'dashboard'

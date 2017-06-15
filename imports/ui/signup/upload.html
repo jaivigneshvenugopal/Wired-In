@@ -1,0 +1,16 @@
+<template name="upload">
+  <form id="msform">
+  <img src = "symbol.jpg" width="50" height="50" alt="symbol">
+  <h2> WiredIn </h2>
+  <fieldset>
+    <h2 class="fs-title">UPLOAD CSV</h2>
+    <h3 class="fs-subtitle">Upload your transaction statement</h3>
+
+  {{#unless uploading}}
+    <input type="file" name="uploadCSV">
+  {{else}}
+    <p><i class="fa fa-spin fa-refresh"></i>Uploading files...</p>
+  {{/unless}}
+</fieldset>
+</form>
+</template>
