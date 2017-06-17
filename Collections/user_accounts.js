@@ -1,1 +1,1 @@
-const Cust_info= new Mongo.Collection("Cust_info");
+Cust_info = new Mongo.Collection("Cust_info");

@@ -1,0 +1,246 @@
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container .menu {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #344149;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.container .menu .title {
+  display: block;
+  width: 100%;
+  height: 70px;
+  background: #1B2226;
+}
+
+.container .menu .title h1 {
+  display: block;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FAFAFA;
+  cursor: default;
+  float: left;
+}
+
+.container .menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.container .menu ul li {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 0 0 1px 0;
+  padding: 0;
+  background: #2D3A41;
+  transition: background 0.12s ease;
+}
+
+.container .menu ul li:hover, .container .menu ul li.active {
+  background: #253036;
+}
+
+.container .menu ul li.active {
+  cursor: pointer;
+}
+
+.container .menu ul li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #253036;
+}
+
+.container .menu ul li:hover:after {
+  width: 100%;
+}
+
+.container .menu ul li a {
+  display: block;
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0 25px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #EFEFEF;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  vertical-align: middle;
+  transition: all 0.2s ease;
+}
+
+.container .menu ul li:hover a, .container .menu ul li.active a {
+  padding: 0 30px;
+}
+
+.container .menu ul li a i {
+  padding: 0 7px 0 0;
+  font-weight: 400;
+  font-size: 17px;
+  verticle-align: middle;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.container .menu ul li:hover a i, .container .menu ul li.active a i {
+  opacity: 1;
+}
+
+.container .menu .credit {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #EDEDED;
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.container .panel {
+  position: absolute;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%;
+  /* padding: 0 275px; */
+  padding: 0 0 0 200px;
+  box-sizing: border-box;
+}
+
+.container .panel .header ul {
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  background: #800000;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 70px;
+}
+
+.container .panel .header ul li {
+  float: left;
+  transition: background 0.12s ease;
+
+}
+
+.container .panel .header ul li a {
+  display: block;
+  text-align: center;
+  padding: 0 35px;
+  margin: 0;
+  color: #EFEFEF;
+  box-sizing: border-box;
+  line-height: 70px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.container .panel .header ul li a i{
+  padding: 0 7px 0 0;
+  font-weight: 400;
+  font-size: 17px;
+  verticle-align: middle;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+
+.container .panel .header ul li:hover, .container .panel .header ul li:active{
+  background: #590000;
+}
+
+.container .panel table {
+  width:100%;
+  table-layout: fixed;
+}
+
+.container .panel .tbl-header {
+  background-color: rgba(255,255,255,1);
+ }
+
+.container .panel .tbl-header table thead tr th {
+  color: #212121;
+  font-weight: 600;
+}
+
+.container .panel .tbl-content {
+  height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+}
+
+.container .panel th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.container .panel td {
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #777;
+  border-bottom: solid 1px rgba(205,205,205,0.5);
+  background: rgba(245,245,245,1);
+}

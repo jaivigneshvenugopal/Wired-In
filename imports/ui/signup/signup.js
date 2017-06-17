@@ -32,10 +32,14 @@ Template.signupAccount.events ({
       booleanPassword = true;
       alert("Password mismatch!");
     }
+    console.log("booleanError = " + booleanError);
+    console.log("booleanPassword = " + booleanPassword);
 
     if (booleanPassword == false && booleanError == false) {
       console.log("User created");
       Router.go('/signup-details');
+      booleanError = !booleanError;
+      booleanPassword = !booleanPassword;
     }
   }
 });

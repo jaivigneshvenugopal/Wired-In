@@ -1,6 +1,63 @@
-<template name = "dashboard" >
-  <h1> Dashboard goes hereeeeee </h1>
-  {{#if currentUser}}
-    <input type="button" class="logout" value="Logout <- This button can only be seen if you are logged into the system" />
-  {{/if}}
+<template name="dashboard">
+	<head>
+		<link href="css/dashboard.css" rel="stylesheet">
+	</head>
+	<div class="container">
+  <div class="menu">
+    <div class="title">
+      <h1>WiredIn</h1>
+    </div>
+    <ul>
+      <li><a href="{{pathFor route='dashboard'}}"><i class="ion-person-stalker"></i>Dashboard</a></li>
+			<li><a href="{{pathFor route='upload'}}"><i class="ion-upload"></i>Upload</a></li>
+      <li><a href="#"><i class="ion-social-usd"></i>DBS/POSB</a></li>
+			<li><a href="#"><i class="ion-social-usd"></i>Citibank</a></li>
+      <li><a href="#"><i class="ion-social-usd"></i>Standard Chartered</a></li>
+			<li><a href="#"><i class="ion-plus-round"></i>Bank</a></li>
+			<li><a href="#" class="logout"><i class="ion-log-out"></i>Log out</a></li>
+		</ul>
+  </div>
+  <div class="panel">
+    <div class="header">
+			<ul>
+			  <li><a class="active" href="#"><i class="ion-ios-paper"></i>Full View</a></li>
+			  <li><a href="#"><i class="ion-calendar"></i>Calendar View</a></li>
+			  <li><a href="#"><i class="ion-stats-bars"></i>Trend View</a></li>
+			</ul>
+		</div>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th data-thead="account">Account</th>
+            <th data-thead="type">Type</th>
+            <th data-thead="hwid">HWID</th>
+            <th data-thead="paid">Paid</th>
+            <th data-thead="lastlogin">Last Login</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td data-tbody="account">uplusion23</td>
+            <td data-tbody="type">Admin</td>
+            <td data-tbody="hwid">12-AB-34-CD-56</td>
+            <td data-tbody="paid">Yes</td>
+            <td data-tbody="lastlogin">11/8/2016 12:45PM</td>
+          </tr>
+          <tr>
+            <td>Primitive</td>
+            <td>User</td>
+            <td>12-AB-34-CD-56</td>
+            <td>No</td>
+            <td>11/8/2016 12:45PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 </template>

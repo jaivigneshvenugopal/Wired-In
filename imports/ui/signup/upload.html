@@ -1,16 +1,22 @@
 <template name="upload">
+  <head>
+		<link href="css/account.css" rel="stylesheet">
+	</head>
   <form id="msform">
-  <img src = "symbol.jpg" width="50" height="50" alt="symbol">
-  <h2> WiredIn </h2>
-  <fieldset>
-    <h2 class="fs-title">UPLOAD CSV</h2>
-    <h3 class="fs-subtitle">Upload your transaction statement</h3>
+    <img src = "symbol.jpg" width="50" height="50" alt="symbol">
+    <h2> WiredIn </h2>
+    <br>
 
-  {{#unless uploading}}
-    <input type="file" name="uploadCSV">
-  {{else}}
-    <p><i class="fa fa-spin fa-refresh"></i>Uploading files...</p>
-  {{/unless}}
-</fieldset>
-</form>
+    <fieldset>
+      <h2 class="fs-title">UPLOAD CSV</h2>
+      <h3 class="fs-subtitle">Upload your Transaction Statement</h3>
+
+    {{#unless uploading}}
+      <input type="file" name="uploadCSV">
+    {{else}}
+      <p><i class="fa fa-spin fa-refresh"></i>Uploading files...</p>
+    {{/unless}}
+    <input type="button" onclick = "window.location.href = '{{pathFor route='dashboard'}}';" name="dashboard" class="next action-button" value="Dashboard" />
+    </fieldset>
+  </form>
 </template>
