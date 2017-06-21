@@ -16,6 +16,9 @@ Router.route('/upload', {
 Router.route('/dashboard', {
   template: 'dashboard'
 });
+Router.route('/calendar-view', {
+  template: 'events'
+})
 Router.route('/', {
-    template: 'signin'
+  template: 'signin'
 });
