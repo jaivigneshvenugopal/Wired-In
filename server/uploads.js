@@ -1,8 +1,8 @@
 import { Meteor } from 'meteor/meteor';
-import '../imports/ui/collections/user_accounts.js';
+//import { Cust_info } from '../imports/ui/lib/user_accounts.js';
 
 Meteor.methods({
-  parseUpload( data ) {
+  parseUpload(data) {
     check( data, Array );
 
     for ( let i = 0; i < data.length; i++ ) {
@@ -29,12 +29,27 @@ Meteor.methods({
         console.log("data length is " + data.length);
         for ( let i = 0; i < data.length; i++ ) {
           let item = data[i];
-          let amount = parseFloat(item.Amount);
+          let amount = parseFloat(item.Debit);
           //console.log(amount);
           total += amount;
           //console.log(total);
         };
         console.log("total is " + total);
         return total;
-    }
+  },
+
+  'collection' : function () {
+      return {
+      collection: Cust_info,
+      rowsPerPage: 5,
+      showFilter: true,
+      showRowCount: true,
+      fields: [
+         {key: 'ID',
+          label: 'ID' },
+         {key: 'Date',
+          label: 'Date' },
+        ]
+      };
+   },
 });

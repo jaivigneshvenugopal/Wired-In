@@ -1,3 +1,32 @@
 <template name="events">
-  <div id="events-calendar"></div>
+  	<head>
+  		<link href="css/dashboard.css" rel="stylesheet">
+  	</head>
+  	<div class="container">
+    <div class="menu">
+      <div class="title">
+        <h1>WiredIn</h1>
+      </div>
+      <ul>
+        <li><a href="{{pathFor route='dashboard'}}"><i class="ion-person-stalker"></i>Dashboard</a></li>
+  			<li><a href="{{pathFor route='upload'}}"><i class="ion-upload"></i>Upload</a></li>
+        <li><a href="#"><i class="ion-social-usd"></i>DBS/POSB</a></li>
+  			<li><a href="#"><i class="ion-social-usd"></i>Citibank</a></li>
+        <li><a href="#"><i class="ion-social-usd"></i>Standard Chartered</a></li>
+  			<li><a href="#"><i class="ion-plus-round"></i>Bank</a></li>
+  			<li><a href="#" class="logout"><i class="ion-log-out"></i>Log out</a></li>
+  		</ul>
+    </div>
+    <div class="panel">
+      <div class="header">
+  			<ul>
+          <li><a href="{{pathFor route='fullview'}}"><i class="ion-ios-paper"></i>Transaction History</a></li> 
+  			  <li><a href="{{pathFor route='calendar-view'}}"><i class="ion-calendar"></i>Calendar View</a></li>
+  			  <li><a href="#"><i class="ion-stats-bars"></i>Trend View</a></li>
+  				<li><a href="#"><i class="ion-cash"></i>I Owe View</a></li>
+  			</ul>
+  		</div>
+      <div class ="calendar" id="events-calendar"></div>
+  	</div>
+  </div>
 </template>

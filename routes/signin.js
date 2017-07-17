@@ -18,7 +18,10 @@ Router.route('/dashboard', {
 });
 Router.route('/calendar-view', {
   template: 'events'
-})
+});
+Router.route('/fullview', {
+  template: 'fullview'
+});
 Router.route('/', {
   template: 'signin'
 });

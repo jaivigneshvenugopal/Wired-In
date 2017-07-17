@@ -1,5 +1,5 @@
 import './upload.html';
-import '../collections/user_accounts.js';
+//import { Cust_info } from '../lib/user_accounts.js';
 
 Template.upload.onCreated( () => {
   Template.instance().uploading = new ReactiveVar( false );
