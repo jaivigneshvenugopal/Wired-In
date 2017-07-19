@@ -8,3 +8,6 @@ import '../imports/ui/dashboard/dashboard.js';
 import '../imports/ui/signup/upload.js';
 import '../routes/signin.js';
 import '../imports/ui/fullview/fullview.js';
+import '../imports/ui/posb/posb.js';
+import '../imports/ui/ocbc/ocbc.js';
+import '../imports/ui/stdc/stdc.js'; 

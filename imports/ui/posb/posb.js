@@ -1,8 +1,8 @@
 import { Template } from 'meteor/templating';
 import { Meteor } from 'meteor/meteor';
-import './fullview.html';
+import './posb.html';
 
-Template.fullview.events ({
+Template.posb.events ({
   'click .logout' :function(event) {
     event.preventDefault();
     Meteor.logout();
@@ -10,15 +10,15 @@ Template.fullview.events ({
   }
 });
 
-Template.fullview.helpers ({
+Template.posb.helpers ({
     collection : function() {
       return Cust_info;
     },
 
     settings : function() {
       return {
-      collection: Cust_info,
-      rowsPerPage: 23,
+      collection: Cust_info.find({"Bank": "POSB"}),
+      rowsPerPage: 20,
       showFilter: true,
       showRowCount: true,
       useFontAwesome:true,
