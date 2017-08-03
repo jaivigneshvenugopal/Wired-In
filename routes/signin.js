@@ -16,6 +16,21 @@ Router.route('/upload', {
 Router.route('/dashboard', {
   template: 'dashboard'
 });
+Router.route('/calendar-view', {
+  template: 'events'
+});
+Router.route('/fullview', {
+  template: 'fullview'
+});
+Router.route('/posb', {
+  template: 'posb' 
+});
+Router.route('/stdc', {
+  template: 'stdc'
+});
+Router.route('/ocbc', {
+  template: 'ocbc'
+});
 Router.route('/', {
-    template: 'signin'
+  template: 'signin'
 });

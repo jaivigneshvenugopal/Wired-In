@@ -13,7 +13,8 @@ Template.signin.events ({
       if (error) {
         console.log(error.reason);
         alert(error.reason);
-      } else {
+      }
+      else {
         Router.go("/dashboard");
       }
     });

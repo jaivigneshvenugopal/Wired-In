@@ -1,4 +1,6 @@
 import './upload.html';
+//import { Cust_info } from '../lib/user_accounts.js';
+
 Template.upload.onCreated( () => {
   Template.instance().uploading = new ReactiveVar( false );
 });
@@ -16,10 +18,11 @@ Template.upload.events({
         Meteor.call( 'parseUpload', results.data, ( error, response ) => {
           if ( error ) {
             Bert.alert( error.reason, 'warning' );
-          } else {
+          }
+          else {
             template.uploading.set( false );
-           Bert.alert( 'Upload complete!', 'success', 'growl-top-right' );
-         }
+            Bert.alert( 'Upload complete!', 'success', 'growl-top-right' );
+          }
        });
       }
     });
