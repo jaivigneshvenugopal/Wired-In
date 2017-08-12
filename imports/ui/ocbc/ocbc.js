@@ -18,23 +18,21 @@ Template.ocbc.helpers ({
     settings : function() {
       return {
       collection: Cust_info.find({"Bank": "OCBC"}),
-      rowsPerPage: 20,
+      rowsPerPage: 21,
       showFilter: true,
       showRowCount: true,
       useFontAwesome:true,
       fields: [
-         {key: 'Date',
-          label: 'Date' },
-         {key: 'Bank',
-          label: 'Bank' },
-         {key: 'ID',
-          label: 'ID' },
-         {key: 'Description',
-          label: 'Description' },
-         {key: 'Debit',
-          label: 'Debit ($)' },
-         {key: 'Credit',
-          label: 'Credit ($)' },
+        {key: 'Date',
+         label: 'Date' },
+        {key: 'Bank',
+         label: 'Bank' },
+        {key: 'Description',
+         label: 'Description' },
+        {key: 'Debit',
+         label: 'Debit ($)' },
+        {key: 'Credit',
+         label: 'Credit ($)' },
         ]
       };
     }

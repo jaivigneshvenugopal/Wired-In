@@ -1,18 +1,54 @@
 import { Meteor } from 'meteor/meteor';
-//import { Cust_info } from '../imports/ui/lib/user_accounts.js';
 
 Meteor.methods({
-  parseUpload(data) {
+  parseUploadPosb(data) {
     check( data, Array );
+    data.NewField = 'Date';
+    data.NewField = 'Bank';
+    data.NewField = 'Description';
+    data.NewField = 'Debit';
+    data.NewField = 'Credit';
 
     for ( let i = 0; i < data.length; i++ ) {
-      let item   = data[ i ],
-          exists = Cust_info.findOne( { Serial: item.Serial } );
+      let item   = data[i];
+      //console.log("item 1  is " + item["0"]);
+      item.Bank = 'POSB';
+      item.Date = item["0"];
+      item.Description = item["4"];
+      item.Debit = item["2"];
+      item.Credit = item["3"];
 
-      if ( !exists ) {
-        Cust_info.insert( item );
-      } else {
-        console.warn( 'Rejected. This item already exists.' );
+      var date = moment(item.Date).format('MM/DD/YYYY');
+
+      item.Date = date;
+      if (date != "Invalid date") {
+        Cust_info.insert(item);
+      }
+    }
+  },
+
+  parseUploadOcbc(data) {
+    check( data, Array );
+    data.NewField = 'Date';
+    data.NewField = 'Bank';
+    data.NewField = 'Description';
+    data.NewField = 'Debit';
+    data.NewField = 'Credit';
+
+    for ( let i = 0; i < data.length; i++ ) {
+      let item   = data[i];
+      //console.log("item 1  is " + item["0"]);
+      item.Bank = 'OCBC';
+      item.Date = item["0"];
+      item.Description = item["2"];
+      item.Debit = item["3"];
+      item.Credit = item["4"];
+
+      var date = moment(item.Date, "D-M-YYYY").format('MM/DD/YYYY');
+
+      item.Date = date;
+      if (date != "Invalid date") {
+        Cust_info.insert(item);
       }
     }
   },
@@ -45,9 +81,7 @@ Meteor.methods({
       showFilter: true,
       showRowCount: true,
       fields: [
-         {key: 'ID',
-          label: 'ID' },
-         {key: 'Date',
+         {key: 'Transaction Date',
           label: 'Date' },
         ]
       };

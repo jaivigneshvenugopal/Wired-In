@@ -19,7 +19,7 @@ Template.events.onRendered( () => {
   $( '#events-calendar' ).fullCalendar({
     height: 550,
     dayRender: function( date, cell ) {
-      var start= moment(date).format('M/D/YYYY');
+      var start= moment(date).format('MM/DD/YYYY');
       //if (typeof start === "string") {
       //  alert("yes");
       //};

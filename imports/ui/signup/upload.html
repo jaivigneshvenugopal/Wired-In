@@ -10,9 +10,14 @@
     <fieldset>
       <h2 class="fs-title">UPLOAD CSV</h2>
       <h3 class="fs-subtitle">Upload your Transaction Statement</h3>
-
+      <select id="mySelect">
+        <option value="Select">Select</option>
+        <option value="POSB">POSB</option>
+        <option value="OCBC">OCBC</option>
+        <option value="STDC">STDC</option>
+      </select>
     {{#unless uploading}}
-      <input type="file" name="uploadCSV">
+      <input type="file" id = "myfile" name="uploadCSV">
     {{else}}
       <p><i class="fa fa-spin fa-refresh"></i>Uploading files...</p>
     {{/unless}}
