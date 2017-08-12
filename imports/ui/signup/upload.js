@@ -41,23 +41,23 @@ Template.upload.events({
           //console.log("json is " + json);
           //var newdata = olddata;
 
-          Meteor.call(string, results.data, ( error, response ) => {
-            if ( error ) {
-              Bert.alert( error.reason, 'warning' );
-            }
-            else {
-              template.uploading.set( false );
-              Bert.alert( 'Upload complete!', 'success', 'growl-top-right' );
-            }
-          });
+        Meteor.call(string, results.data, ( error, response ) => {
+          if ( error ) {
+            Bert.alert( error.reason, 'warning' );
+          }
+          else {
+            template.uploading.set( false );
+            Bert.alert( 'Upload complete!', 'success', 'growl-top-right' );
+          }
+        });
+
+        //string = "";
         //console.log(results.data);
         //olddata.splice(0,16);
         //var json = JSON.stringify(olddata);
         //console.log("json is " + json);
       }
     });
-
-
   }
 });
 

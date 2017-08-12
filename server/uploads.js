@@ -53,6 +53,32 @@ Meteor.methods({
     }
   },
 
+  parseUploadStdc(data) {
+    check( data, Array );
+    data.NewField = 'Date';
+    data.NewField = 'Bank';
+    data.NewField = 'Description';
+    data.NewField = 'Debit';
+    data.NewField = 'Credit';
+
+    for ( let i = 0; i < data.length; i++ ) {
+      let item   = data[i];
+      //console.log("item 1  is " + item["0"]);
+      item.Bank = 'STDC';
+      item.Date = item["0"];
+      item.Description = item["1"];
+      item.Debit = item["4"];
+      item.Credit = item["3"];
+
+      var date = moment(item.Date, "DD-MM-YYYY").format('MM/DD/YYYY');
+
+      item.Date = date;
+      if (date != "Invalid date") {
+        Cust_info.insert(item);
+      }
+    }
+  },
+
   'dailyExp': function(start) {
         if (typeof start === "string") {
             console.log("start is string");
@@ -65,9 +91,11 @@ Meteor.methods({
         console.log("data length is " + data.length);
         for ( let i = 0; i < data.length; i++ ) {
           let item = data[i];
-          let amount = parseFloat(item.Debit);
+          if(item.Debit != "") {
+            let amount = parseFloat(item.Debit);
+            total += amount;
+          }
           //console.log(amount);
-          total += amount;
           //console.log(total);
         };
         console.log("total is " + total);
