@@ -18,7 +18,7 @@ Template.signupAccount.events ({
     if (password === password1) {
       Accounts.createUser({
         email: email,
-        password: password
+        password: password,
       },
       function(error){
         if(error){
@@ -51,6 +51,7 @@ Template.signupDetails.events ({
     var lastName = template.find('#LN').value;
     var phone = template.find('#phone').value;
     var address = template.find('#add').value;
+    var income = template.find('#income').value;
 
     console.log("Data Collected");
 
@@ -60,11 +61,11 @@ Template.signupDetails.events ({
           "profile.firstname":firstName,
           "profile.lastname":lastName,
           "profile.phone":phone,
-          "profile.address":address
+          "profile.address":address,
+          "salary":income
         }
       },
-    );
-
+    );  
     console.log("Data Updated");
     Router.go('/signup-banksetup');
   },

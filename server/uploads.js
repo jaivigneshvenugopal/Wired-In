@@ -1,6 +1,49 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.methods({
+  'getdata': function() {
+    var data = Cust_info.find({}).fetch();
+    var item;
+    var amount = 0;
+    var date;
+    var curdate;
+    console.log(data.length);
+    for ( let i = 0; i < data.length; i++ ) {
+      item = data[i];
+      if(item.Bank == "POSB") {
+        date = moment(item.Date).format('MM').toString();
+      }
+      else if (item.Bank == "OCBC") {
+        date = moment(item.Date, "D-M-YYYY").format('MM').toString();
+      }
+      else if (item.Bank == "STDC") {
+        date = moment(item.Date, "MM-DD-YYYY").format('MM').toString();
+      }
+      curdate = new Date();
+      console.log(curdate);
+      curdate = 1 + parseInt(curdate.getMonth());
+      console.log("curdate is " + curdate);
+      date = parseInt(date);
+      console.log("date is " + date);
+      if(curdate == 1) {
+        if(date == 12) {
+          if(item.Debit != "") {
+            amount += parseFloat(item.Debit);
+            console.log("amount is " + amount);
+          }
+        }
+      }
+      else if ((curdate-1) == date) {
+        if(item.Debit != "") {
+          amount += parseFloat(item.Debit);
+          console.log("amount is " + amount);
+        }
+      }
+    };
+    console.log("final amount is " + amount);
+    return amount;
+  },
+
   parseUploadPosb(data) {
     check( data, Array );
     data.NewField = 'Date';

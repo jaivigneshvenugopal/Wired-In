@@ -160,6 +160,7 @@ html, body {
   box-sizing: border-box;
 }
 
+
 .container .panel .header ul {
   list-style-type: none;
   overflow: hidden;
@@ -172,10 +173,28 @@ html, body {
   line-height: 70px;
 }
 
+.container .panel .header1 ul {
+  list-style-type: none;
+  font-size: 150%; 
+  font-weight: bolder;
+  overflow: hidden;
+  width: 100%;
+  height: 70px;
+  background: #E6E6FA;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 70px;
+}
+
 .container .panel .header ul li {
   float: left;
   transition: background 0.12s ease;
+}
 
+.container .panel .header1 ul li {
+  text-align: center;
+  transition: background 0.12s ease;
 }
 
 .container .panel .header ul li a {
@@ -217,6 +236,11 @@ html, body {
   margin: 0;
   box-sizing: border-box;
   line-height: 70px;
+}
+
+.container .panel .charts {
+  padding-top: 30px;
+  padding-left: 360px;
 }
 
 .container .panel .calendar {
