@@ -10,4 +10,5 @@ import '../routes/signin.js';
 import '../imports/ui/fullview/fullview.js';
 import '../imports/ui/posb/posb.js';
 import '../imports/ui/ocbc/ocbc.js';
-import '../imports/ui/stdc/stdc.js'; 
+import '../imports/ui/stdc/stdc.js';
+import '../imports/ui/trendview/trendview.js';
