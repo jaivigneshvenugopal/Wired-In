@@ -10,6 +10,17 @@ Router.route('/signup-banksetup', {
 Router.route('/budget-setup', {
   template: 'budgetSetup'
 });
+Router.route('/trendview', {
+  template: 'trendview',
+  onBeforeAction: function(){
+        var currentUser = Meteor.userId();
+        if(currentUser){
+            this.next();
+        } else {
+            this.render("signin");
+        }
+    }
+});
 Router.route('/upload', {
   template: 'upload',
   onBeforeAction: function(){

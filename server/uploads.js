@@ -1,6 +1,23 @@
 import { Meteor } from 'meteor/meteor';
 
 Meteor.methods({
+  'getinfo': function() {
+    var data = Cust_info.find({}).fetch();
+    var amt = [0,0,0,0,0,0,0,0,0,0,0,0];
+    //console.log("check amt is "+ amt[0]);
+    for (let i = 0; i < data.length; i++){
+      var item = data[i];
+      var date = item.Date;
+      var month= parseInt(moment(date,"MM/DD/YYYY").format('M'));
+      console.log(month);
+      if (item.Debit != "") {
+        amt[month] =  parseFloat(amt[month]) + parseFloat(data[i].Debit);
+      }
+      console.log("check "+ amt);
+    }
+    return amt;
+  },
+
   'getdata': function() {
     var data = Cust_info.find({}).fetch();
     var item;

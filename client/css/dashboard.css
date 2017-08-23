@@ -175,7 +175,7 @@ html, body {
 
 .container .panel .header1 ul {
   list-style-type: none;
-  font-size: 150%; 
+  font-size: 150%;
   font-weight: bolder;
   overflow: hidden;
   width: 100%;
@@ -239,6 +239,11 @@ html, body {
 }
 
 .container .panel .charts {
+  padding-top: 30px;
+  padding-left: 360px;
+}
+
+.container .panel .charts1 {
   padding-top: 30px;
   padding-left: 360px;
 }
